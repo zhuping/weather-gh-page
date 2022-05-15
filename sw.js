@@ -1,7 +1,7 @@
 const CACHE_NAME = 'weather-cache';
 
 const FILE_TO_CACHE = [
-  '/weather-gh-page/index.html',
+  '/weather-gh-page',
 ];
 
 this.addEventListener('install', function(event) {
