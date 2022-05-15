@@ -20,6 +20,10 @@ this.addEventListener('active', function(event) {
 });
 
 this.addEventListener('fetch', function(event) {
+  // check if request is made by chrome extensions or web page
+  // if request is made for web page url must contains http.
+  if (!event.request.url.indexOf('http') === 0) return;
+
   const requestToCache = event.request.clone();
   event.respondWith(
     fetch(requestToCache).then(function(response) {
