@@ -30,7 +30,7 @@ function Home() {
             </ul>
           </div>
         </div>
-        <Link to={`/weather-gh-page/detail?id=${city}`} className="btn-link">详情</Link>
+        <Link to={`/detail?id=${city}`} className="btn-link">详情</Link>
       </div>
       <div className="quota">
         <ul>
