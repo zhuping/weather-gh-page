@@ -1,0 +1,79 @@
+// 背景设置
+@mixin background($size) {
+  width: $size;
+  height: $size;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+// 晴天
+@mixin icon-sun($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Sun-#{$date}.png);
+}
+
+// 多云
+@mixin icon-clouds($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Clouds-#{$date}.png);
+}
+
+// 大风
+@mixin icon-wind($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Wind-#{$date}.png);
+}
+
+// 雨天
+@mixin icon-rain($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Rain-#{$date}.png);
+}
+
+// 雪天
+@mixin icon-snow($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Snow-#{$date}.png);
+}
+
+// 打雷
+@mixin icon-storm($size: 240px, $date: 'day') {
+  @include background($size);
+  background-image: url(~@/assets/imgs/Storm-#{$date}.png);
+}
+
+// 降水量
+@mixin icon-rainfall($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-rain.png);
+}
+
+// 湿度
+@mixin icon-humidity($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-humidity.png);
+}
+
+// 风速
+@mixin icon-wind($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-wind.png);
+}
+
+// 降水量
+@mixin icon-rainfall-color($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-rain-color.png);
+}
+
+// 湿度
+@mixin icon-humidity-color($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-humidity-color.png);
+}
+
+// 风速
+@mixin icon-wind-color($size: 48px) {
+  @include background($size);
+  background-image: url(~@/assets/imgs/noun-wind-color.png);
+}
