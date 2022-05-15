@@ -1,6 +1,6 @@
 # 项目介绍
 
-基于 React 应用开发的天气 APP，目前固定展示杭州余杭地区的实时天气。依赖三方天气 [API](https://dev.qweather.com/docs/api/)
+基于 React 应用开发的天气 APP，目前固定展示杭州余杭地区的实时天气，支持离线缓存。依赖三方天气 [API](https://dev.qweather.com/docs/api/)
 
 ## 目录结构
 
