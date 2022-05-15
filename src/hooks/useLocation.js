@@ -13,7 +13,7 @@ const useLocation = () => {
       const { location } = data;
       const { id, name, adm2, adm1 } = location[3];  // 默认选区余杭区
       setCity(id);
-      setLocation(`${name}区,${adm2}市,${adm1}`);
+      setLocation(`${name}区,${adm2}市`);
     }).catch(() => {
       setError('There is no such location.');
     }).finally(() => {

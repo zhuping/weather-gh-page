@@ -6,9 +6,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route exact path="/detail" element={<Detail />}></Route>
-        {/* <Route exact path="*" element={<Detail />}></Route> */}
+        <Route exact path="/weather-gh-page" element={<Home />}></Route>
+        <Route exact path="/weather-gh-page/detail" element={<Detail />}></Route>
       </Routes>
     </BrowserRouter>
   )

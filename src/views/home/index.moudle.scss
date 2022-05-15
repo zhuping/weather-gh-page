@@ -11,8 +11,11 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    &.icon-sun {
+    &.icon-sun-day {
       @include icon-sun();
+    }
+    &.icon-sun-night {
+      @include icon-sun(240px, 'night');
     }
   }
   .location {
@@ -75,25 +78,27 @@
       align-items: flex-end;
       margin-top: 18px;
       .item {
-        height: 64px;
-        line-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
         font-style: normal;
         list-style: none;
-        font-weight: 500;
-        font-size: 40px;
-        zoom: .5;
-        color: #fff;
-        text-align: center;
         border-radius: 80px;
-        flex: none;
-        flex-grow: 0;
         margin-bottom: 16px;
+        .txt {
+          font-weight: 500;
+          font-size: 40px;
+          zoom: .5;
+          color: #fff;
+          line-height: 1.2;
+        }
         &.red {
-          width: 288px;
+          width: 144px;
           background: rgba(212, 66, 111, 0.5);
         }
         &.purple {
-          width: 200px;
+          width: 100px;
           background: rgba(106, 117, 186, 0.5);
         }
       }

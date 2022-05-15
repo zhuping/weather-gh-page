@@ -7,8 +7,11 @@
     position: absolute;
     top: 78px;
     right: 32px;
-    &.icon-sun {
-      @include icon-sun(200px);
+    &.icon-sun-day {
+      @include icon-sun();
+    }
+    &.icon-sun-night {
+      @include icon-sun(240px, 'night');
     }
   }
   .location {

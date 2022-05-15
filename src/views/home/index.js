@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as dayjs from 'dayjs';
 import { weekCN } from '@utils/time';
+import { getWeatherCls } from '@utils/class';
 import useLocation from '@hooks/useLocation';
 import useWeather from '@hooks/useWeather';
 
@@ -10,13 +11,9 @@ function Home() {
   const { city, location } = useLocation();
   const { now } = useWeather(city);
 
-  function getClassName() {
-    return 'icon-sun'
-  }
-
   return (
     <div className="weather-home">
-      <div className={`weather-logo ${getClassName()}`}></div>
+      <div className={`weather-logo ${getWeatherCls(now.text)}`}></div>
       <div className="location">
         <div className="location-top">{location}</div>
         <div className="location-mid">
@@ -29,11 +26,11 @@ function Home() {
           </div>
           <div className="right">
             <ul className="weather">
-              <li className="item red">{now.text}</li>
+              <li className="item red"><span className="txt">{now.text}</span></li>
             </ul>
           </div>
         </div>
-        <Link to={`/detail?id=${city}`} className="btn-link">详情</Link>
+        <Link to={`/weather-gh-page/detail?id=${city}`} className="btn-link">详情</Link>
       </div>
       <div className="quota">
         <ul>
