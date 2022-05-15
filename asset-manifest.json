@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/weather-gh-page/static/css/main.a0fa8024.css",
+    "main.js": "/weather-gh-page/static/js/main.b3017684.js",
+    "static/js/787.d9312eb8.chunk.js": "/weather-gh-page/static/js/787.d9312eb8.chunk.js",
+    "static/media/Sun-day.png": "/weather-gh-page/static/media/Sun-day.351996dd6cea1914c4bd.png",
+    "index.html": "/weather-gh-page/index.html",
+    "main.a0fa8024.css.map": "/weather-gh-page/static/css/main.a0fa8024.css.map",
+    "main.b3017684.js.map": "/weather-gh-page/static/js/main.b3017684.js.map",
+    "787.d9312eb8.chunk.js.map": "/weather-gh-page/static/js/787.d9312eb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0fa8024.css",
+    "static/js/main.b3017684.js"
+  ]
+}
