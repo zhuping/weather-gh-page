@@ -21,7 +21,7 @@ this.addEventListener('active', function(event) {
 
 this.addEventListener('fetch', function(event) {
   const requestToCache = event.request.clone();
-  event.responseWith(
+  event.respondWith(
     fetch(requestToCache).then(function(response) {
       // 加载失败
       if (!response || response.status !== 200) {
