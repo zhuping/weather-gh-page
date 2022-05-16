@@ -13,7 +13,7 @@ export function getWeatherByCity(cityCode) {
 }
 
 export function get24HourWeather(cityCode) {
-  return axios.get('https://devapi.qweather.com/v7/weather/3d', {
+  return axios.get('https://devapi.qweather.com/v7/weather/24h', {
     location: cityCode
   })
 }

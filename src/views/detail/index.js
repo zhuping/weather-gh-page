@@ -2,9 +2,11 @@ import { useSearchParams } from 'react-router-dom';
 import useLocation from '@hooks/useLocation';
 import useWeather from '@hooks/useWeather';
 import { getWeatherCls } from '@utils/class';
-// import useTemp from '@hooks/useTemp';
+import useTemp from '@hooks/useTemp';
+import Canvas from '@antv/f2-react';
+import { Chart, Area, Line, Axis } from '@antv/f2';
 
-import style from './index.moudle.scss';
+import './index.moudle.scss';
 
 function Detail() {
   const [ params ] = useSearchParams();
@@ -12,6 +14,8 @@ function Detail() {
 
   const { location } = useLocation();
   const { now } = useWeather(id);
+
+  let { temps } = useTemp(id);
 
   return (
     <>
@@ -38,6 +42,27 @@ function Detail() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="chart-container">
+        <h3 className="title">Today</h3>
+        <Canvas pixelRatio={window.devicePixelRatio}>
+          <Chart
+            data={temps}
+            scale={{
+              temp: {
+                min: 0,
+              },
+              fxTime: {
+                range: [0, 1],
+              },
+            }}
+          >
+            <Axis field="fxTime" />
+            <Axis field="temp" />
+            <Area x="fxTime" y="temp" />
+            <Line x="fxTime" y="temp" />
+          </Chart>
+        </Canvas>
       </div>
     </>
   );

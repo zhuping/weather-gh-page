@@ -3,6 +3,7 @@
 .weather-detail {
   position: relative;
   background-color: #fff;
+  height: 742px;
   .weather-logo {
     position: absolute;
     top: 78px;
@@ -90,5 +91,15 @@
         }
       }
     }
+  }
+}
+.chart-container {
+  .title {
+    color: #332821;
+    font-size: 36px;
+    margin: 0 0 10px 40px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
   }
 }
